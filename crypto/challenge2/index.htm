@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>CTF Academy : Challenge 2</title>
-			<meta name="description" content="For this challenge you will need to find the site administrator’s username and password; log in to get the flag.">
+			<meta name="description" content="We intercepted a file containing a secret flag, but we can’t seem to open the file. See if you can identify the proper file-type and open the file.">
 			
 			<meta name="author" content="CTF Academy">			
 			<link href="../../src/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
@@ -50,7 +50,7 @@
 						</span>						
 						<span class = "mainorange"> 
 						<a href="../index.htm">
-						Web App Exploitation
+						Cryptography
 						</a>
 						</span>						
 						</h2>
@@ -104,22 +104,19 @@
 
 <div class="list-group-flush myLightBox mb-4">
   <div class="list-group-item contents" >Table of Contents</div>
-    <a href="../index.htm#WebAppExploitation" class="list-group-item list-group-item-action">1. Web App Exploitation</a>
+    <a href="../index.htm#Cryptography" class="list-group-item list-group-item-action">1. Cryptography</a>
 
-  <a href="../index.htm#html" class="list-group-item list-group-item-action lvl2">1.1 HTML</a>
-  <a href="../index.htm#css" class="list-group-item list-group-item-action lvl2">1.2 CSS</a>
+  <a href="../index.htm#Ciphers" class="list-group-item list-group-item-action lvl2">1.1 Ciphers</a>
 
-    <a href="../index.htm#javascript" class="list-group-item list-group-item-action lvl2">1.3 JavaScript</a>
-	
-  <a href="../index.htm#database" class="list-group-item list-group-item-action lvl2">1.4 Databases</a>
   
-  <a href="../index.htm#SecurityVulnerabilities" class="list-group-item list-group-item-action">2. Security Vulnerabilities</a>
+  <a href="../index.htm#DigitalForensics" class="list-group-item list-group-item-action">2. Digital Forensics</a>
+
+  <a href="../index.htm#Steganography" class="list-group-item list-group-item-action">3. Steganography</a>
   
-    <a href="../index.htm#HTMLVulnerabilities" class="list-group-item list-group-item-action lvl2">2.1 HTML Vulnerabilities</a>
-  <a href="../index.htm#CSSVulnerabilities" class="list-group-item list-group-item-action lvl2">2.2 CSS Vulnerabilities</a>
-  <a href="../index.htm#JavaScriptVulnerabilities" class="list-group-item list-group-item-action lvl2">2.3 JavaScript Vulnerabilities</a>
-    <a href="../index.htm#DatabaseVulnerabilities" class="list-group-item list-group-item-action lvl2">2.4 Database Vulnerabilities</a>
-  <a href="../index.htm#Summary" class="list-group-item list-group-item-action">3. Summary</a>
+   <a href="../index.htm#FileSteganography" class="list-group-item list-group-item-action lvl2">3.1 File Steganography</a>
+   
+   
+   <a href="../cyberchef.htm" class="list-group-item list-group-item-action">CyberChef</a>
   
 
 </div>
@@ -147,7 +144,7 @@
 				
 				<ol class="breadcrumb">
 				  <li class="breadcrumb-item"><a href="../../index.htm">Home</a></li>
-				  <li class="breadcrumb-item"><a href="../index.htm">Web App Exploitation</a></li>
+				  <li class="breadcrumb-item"><a href="../index.htm">Cryptography</a></li>
 				  <li class="breadcrumb-item active">Challenge 2</li>
 				</ol>				
 
@@ -157,123 +154,22 @@
 				</noscript>
 
 <!-- Challenge Content Starts here -->
-<h3>Challenge 2: Cup of JavaScript</h3>
+<h3>Challenge 2: Forensics</h3>
 
 <p>
-For this challenge you will need to find the site administrator’s username and password; log in to get the flag.
+We intercepted a file containing a secret flag, but we can’t seem to open the file. See if you can identify the proper file-type and open the file.
 </p>
 
 <p>
-<b>Hint:</b> The login form is processed with JavaScript; remember what you learned earlier in this module about JavaScript logins.
+<a href="forensics_challenge.pdf"  target="_blank">
+Click here to access the file: forensics_challenge.pdf
+</a>
 </p>
 
-<!-- Sign in form -->
-<script> function buttonFunction() {
-      
-	   
-var myPassword = document.getElementById("password").value;
 
-var username = document.getElementById("username").value;
-
-var myalert = "637466617b436c69656e742d736964655f56616c69646174696f6e7d";
-
-	
-	var admin = "admin";
-	
-	var pass = "SuperSecretPassword";
-	
- var myString = hex2a(myalert);
-	
-if (username == admin && myPassword == pass) {
-			
-
-				
-				$("#loginFeedback").html("Great job! The flag is below.");
-				
-				$("#loginFeedback").css("color", "#28a745");
-				
-				$("#signin").css("transition-duration", "1.0s");
-		
-				$("#signin").css("background-color", "#28a745");
-				
-				$("#username").css("transition-duration", "1.0s");
-				
-				$("#username").css("border-color", "#28a745");
-				
-				$("#password").css("transition-duration", "1.0s");
-				
-				$("#password").css("border-color", "#28a745");
-				
-				
-				$("#flagDiv").addClass("loginFlag myLightBox p-4 my-4");
-				
-				$("#successFlag").html(myString);
-				
-			
-   
-}
-
-
-
-else {
-	
-	
-	$("#loginFeedback").html("Incorrect username/password. Try again.");
-	
-	
-		
-		$("#loginFeedback").css("color", "#dc3545");
-		
-		$("#signin").css("transition-duration", "1.0s");
-		
-		$("#signin").css("background-color", "#dc3545");
-		
-		$("#username").css("transition-duration", "1.0s");
-		
-		$("#username").css("border-color", "#dc3545");
-		
-		$("#password").css("transition-duration", "1.0s");
-		
-		$("#password").css("border-color", "#dc3545");
-	
-	
-}
-	   
-	   
-} </script>
-<div class = "mySignInBox myLightBox my-4">
-
-<form class="text-center">
-<div class = "mySignIn p-2">
-	
-    <p class="h4">Sign in</p>
-	
-</div>
-	
-<div class = "mySignInFields p-4">
-
-<div class="mb-3"> 
-    <input type="text" id="username" class="form-control mb-3" placeholder="Username" required>
-	
-    <input type="password" id="password" class="form-control mb-1" placeholder="Password" required>
-	
-	<span id="loginFeedback"></span>
-</div>
-    <button onclick="buttonFunction()" class="btn btn-mybutton btn-block mb-2" id = "signin" type="button">Sign in</button>
-</div>
-</form>
-</div>
-
-<!-- Challenge Content Ends here -->
-
-<div id="flagDiv">
-
-	<span id="successFlag"></span>
-
-</div>
 
 <p>
-<b>Question 1:</b> What is the administrator’s username?
+<b>Question 1:</b> What is the file signature for this file?
 </p>
 
 <!-- Q1 input form -->
@@ -296,34 +192,6 @@ else {
 </div>
 <!-- Flag form End -->
 
-
-
-<p>
-<b>Question 2:</b> What is the administrator’s password?
-</p>
-
-<!-- Q2 input form -->
-<div class = "mySignInBox myLightBox my-4">
-<form class="text-center" novalidate>
-<div class = "mySignIn p-2">
-    <p class="h4">Question 2</p>	
-</div>	
-<div class = "mySignInFields p-4">	
-	<div class="mb-3">    
-    <input type="text" id="flag2" class="form-control">	
-	<span id="flagFeedback2"></span>
-	</div>
-	
-    <!-- Submit button -->
-    <button onclick="q2()" class="btn btn-mybutton btn-block mb-2" id = "submit2" type="button">Submit</button>
-
-    </div>
-</form>
-</div>
-<!-- Flag form End -->
-
-
-<!-- Challenge Content Ends here -->
 
 <p>
 <b>Challenge 2:</b> Find the flag and input the answer.
@@ -396,17 +264,17 @@ else {
 	  <!-- Footer Column 1 -->
 	<div class="col-md-4 order-2 order-md-1 leftInfo">	
 	<div class="infoLinks">
-		<a href="../../other/contact_us.htm" class="">Contact Us</a>
-		<a href="../../other/glossary.htm" class="">Glossary</a>
-		<a href="../../other/site_index.htm" class="">Site Index</a>	
-		<a href="../../other/legal_disclaimer.htm" class="">Legal Disclaimer</a>
+		<a href="../../other/contact_us.htm"  >Contact Us</a>
+		<a href="../../other/glossary.htm"  >Glossary</a>
+		<a href="../../other/quick_start.htm" >Quick Start Guide</a>	
+		<a href="../../other/legal_disclaimer.htm"  >Legal Disclaimer</a>
 	</div>
 	</div>
   <!-- Footer Column 2 -->
      <div class="col-md-4 py-4 order-1 order-md-2">
         <div class="flex-center socialButtons">
           <!-- Email -->		  
-		  <a href="mailto:cybertrainingforceacademy@gmail.com" target="_blank">		  
+		  <a href="mailto:cybertrainingforceacademy@gmail.com" >		  
 		  <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
 		  </a>		  
 		<!-- Facebook -->

@@ -1,21 +1,8 @@
-
-function hex2a(hexx) {
-    var hex = hexx.toString();//force conversion
-    var str = '';
-    for (var i = 0; (i < hex.length && hex.substr(i, 2) !== '00'); i += 2)
-        str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
-    return str;
-}
-
-
-
-
-
 function q1 (){
 	
 	var flag = $('#flag1').val();
 	
-	var flagHash = "21232f297a57a5a743894a0e4a801fc3";
+	var flagHash = "bff139fa05ac583f685a523ab3d110a0";
 		
 	var flagCheck = hashCheck(flag, flagHash);
 	
@@ -55,56 +42,12 @@ function q1 (){
 }
 
 
-function q2 (){
-	
-	var flag = $('#flag2').val();
-	
-	var flagHash = "bbb2c5e63d2ef893106fdd0d797aa97a";
-		
-	var flagCheck = hashCheck(flag, flagHash);
-	
-	
-	if (flagCheck == true) {
-		
-		
-		$("#flagFeedback2").html("Good job! Try the next question.");
-		
-		$("#flagFeedback2").css("color", "#28a745");
-		
-		$("#submit2").css("transition-duration", "1.0s");
-		
-		$("#submit2").css("background-color", "#28a745");
-		
-		$("#flag2").css("transition-duration", "1.0s");
-		
-		$("#flag2").css("border-color", "#28a745");
-		
-	}
-	else {
-		
-		$("#flagFeedback2").html("Sorry, try again.");
-		
-		$("#flagFeedback2").css("color", "#dc3545");
-		
-		$("#submit2").css("transition-duration", "1.0s");
-		
-		$("#submit2").css("background-color", "#dc3545");
-		
-		$("#flag2").css("transition-duration", "1.0s");
-		
-		$("#flag2").css("border-color", "#dc3545");
-		
-	}
-
-}
-
-
 
 function myFlag (){
 	
 	var flag = $('#flag').val();
 	
-	var flagHash = "0b730c15ed96a9f034c274e2c8d8328b";
+	var flagHash = "8405cdb083d7ca0b329bec5a96cafeb4";
 		
 	var flagCheck = hashCheck(flag, flagHash);
 	

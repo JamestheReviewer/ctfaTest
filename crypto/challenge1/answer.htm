@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>CTF Academy : Challenge 1 Explanation</title>
-			<meta name="description" content="Web App Exploitation Challenge 1 Explanation">
+			<meta name="description" content="Cryptography Challenge 1 Explanation">
 			
 			<meta name="author" content="CTF Academy">			
 			<link href="../../src/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
@@ -50,7 +50,7 @@
 						</span>						
 						<span class = "mainorange"> 
 						<a href="../index.htm">
-						Web App Exploitation
+						Cryptography
 						</a>
 						</span>						
 						</h2>
@@ -104,22 +104,19 @@
 
 <div class="list-group-flush myLightBox mb-4">
   <div class="list-group-item contents" >Table of Contents</div>
-    <a href="../index.htm#WebAppExploitation" class="list-group-item list-group-item-action">1. Web App Exploitation</a>
+    <a href="../index.htm#Cryptography" class="list-group-item list-group-item-action">1. Cryptography</a>
 
-  <a href="../index.htm#html" class="list-group-item list-group-item-action lvl2">1.1 HTML</a>
-  <a href="../index.htm#css" class="list-group-item list-group-item-action lvl2">1.2 CSS</a>
+  <a href="../index.htm#Ciphers" class="list-group-item list-group-item-action lvl2">1.1 Ciphers</a>
 
-    <a href="../index.htm#javascript" class="list-group-item list-group-item-action lvl2">1.3 JavaScript</a>
-	
-  <a href="../index.htm#database" class="list-group-item list-group-item-action lvl2">1.4 Databases</a>
   
-  <a href="../index.htm#SecurityVulnerabilities" class="list-group-item list-group-item-action">2. Security Vulnerabilities</a>
+  <a href="../index.htm#DigitalForensics" class="list-group-item list-group-item-action">2. Digital Forensics</a>
+
+  <a href="../index.htm#Steganography" class="list-group-item list-group-item-action">3. Steganography</a>
   
-    <a href="../index.htm#HTMLVulnerabilities" class="list-group-item list-group-item-action lvl2">2.1 HTML Vulnerabilities</a>
-  <a href="../index.htm#CSSVulnerabilities" class="list-group-item list-group-item-action lvl2">2.2 CSS Vulnerabilities</a>
-  <a href="../index.htm#JavaScriptVulnerabilities" class="list-group-item list-group-item-action lvl2">2.3 JavaScript Vulnerabilities</a>
-    <a href="../index.htm#DatabaseVulnerabilities" class="list-group-item list-group-item-action lvl2">2.4 Database Vulnerabilities</a>
-  <a href="../index.htm#Summary" class="list-group-item list-group-item-action">3. Summary</a>
+   <a href="../index.htm#FileSteganography" class="list-group-item list-group-item-action lvl2">3.1 File Steganography</a>
+   
+   
+   <a href="../cyberchef.htm" class="list-group-item list-group-item-action">CyberChef</a>
   
 
 </div>
@@ -147,7 +144,7 @@
 				
 				<ol class="breadcrumb">
 				  <li class="breadcrumb-item"><a href="../../index.htm">Home</a></li>
-				  <li class="breadcrumb-item"><a href="../index.htm">Web App Exploitation</a></li>
+				  <li class="breadcrumb-item"><a href="../index.htm">Cryptography</a></li>
 				  <li class="breadcrumb-item"><a href="index.htm">Challenge 1</a></li>
 				  <li class="breadcrumb-item active">Explanation</li>
 				</ol>				
@@ -158,48 +155,31 @@
 				</noscript>
 
 <!-- Challenge Content Starts here -->
-<h3>Challenge 1 Explanation: Commit to Comments</h3>
+<h3>Challenge 1 Explanation: Cryptography</h3>
 
 <p>
-When developing or securing a web page, you should always check for comments in the HTML source left by developers. Sometimes, HTML comments pose no security risk, such as comments denoting page sections; however, some comments, such as those commenting out incomplete or insecure web page functions, can compromise the security of the web page. The answers to this challenge can be found in the comments in the challenge’s web page source.
+Encoding and ciphering messages can be an effective method for sending secret messages; however, the cipher that is used must be very complex and hard to decode to be effective. In this lesson, we learned about a simple cipher that was developed around 50 B.C. for Julius Caesar. In its day, the cipher was complex enough to secretly relay messages, but in the modern, world the ROT cipher is very weak and offers little secrecy. To be effective today, a cipher must be incredibly complex and hard to decode.
 </p>
 
 <p>
-Below is a step-by-step guide of how to answer the questions and complete the challenge.
+In this lesson, we learned about the ROT, or Caesar, cipher and how to decode it by hand, as well as decoding it using CyberChef. In this explanation we will be using CyberChef to decode the message.
 </p>
 
 <p>
-Begin by right-clicking on the page and selecting “View Page Source.”
-</p>
-
-<div class="screenshot myLightBox my-3">
-		<img src="web1.1.JPG" alt="Explanation Screenshot 1">
-</div>
-
-<p>
-Next, look through the page’s source for any comments of interest. For this challenge, there are several interesting comments grouped together as seen below.
+First, we open <a href="../cyberchef.htm" target="_blank">CyberChef</a> and input the encoded message into the “Input” box.
 </p>
 
 <div class="screenshot myLightBox my-3">
-		<img src="web1.2.JPG" alt="Explanation Screenshot 2">
+		<img src="crypto1.1.JPG" alt="Explanation Screenshot 1">
 </div>
 
 <p>
-The answer to the first question can be found on line 161 in the page source. As seen in the above screenshot, the answer is “Sir Code-a-lot”.
+Next select the “ROT13” cyber and drag-and-drop it into the “Recipe” box. Now you should see the decoded message and the answers to the questions.
 </p>
 
-<p>
-The answer to question 2 can be found on the same line as the answer to question 1; the answer is “April”.
-</p>
-
-<p>
-The answer to question 3 can be found on lines 165 and 166 of the page’s source. As we can see, the developer made a note that the “Admin.html” page is not complete; however, the developer created a link to the page and commented out the link. 
-</p>
-
-<p>
-The flag is found on line 171 of the page’s source.
-</p>
-
+<div class="screenshot myLightBox my-3">
+		<img src="crypto1.2.JPG" alt="Explanation Screenshot 2">
+</div>
 
 			
 			<div id="backToTop" class="my-3">
@@ -247,17 +227,17 @@ The flag is found on line 171 of the page’s source.
 	  <!-- Footer Column 1 -->
 	<div class="col-md-4 order-2 order-md-1 leftInfo">	
 	<div class="infoLinks">
-		<a href="../../other/contact_us.htm" class="">Contact Us</a>
-		<a href="../../other/glossary.htm" class="">Glossary</a>
-		<a href="../../other/site_index.htm" class="">Site Index</a>	
-		<a href="../../other/legal_disclaimer.htm" class="">Legal Disclaimer</a>
+		<a href="../../other/contact_us.htm"  >Contact Us</a>
+		<a href="../../other/glossary.htm"  >Glossary</a>
+		<a href="../../other/quick_start.htm" >Quick Start Guide</a>	
+		<a href="../../other/legal_disclaimer.htm"  >Legal Disclaimer</a>
 	</div>
 	</div>
   <!-- Footer Column 2 -->
       <div class="col-md-4 py-4 order-1 order-md-2">
         <div class="flex-center socialButtons">
           <!-- Email -->		  
-		  <a href="mailto:cybertrainingforceacademy@gmail.com" target="_blank">		  
+		  <a href="mailto:cybertrainingforceacademy@gmail.com" >		  
 		  <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
 		  </a>		  
 		<!-- Facebook -->

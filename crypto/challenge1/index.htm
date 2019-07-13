@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>CTF Academy : Challenge 1</title>
-			<meta name="description" content="It looks like this page may have some useful information hiding in its source code. See if you can answer these questions and find the flag.">
+			<meta name="description" content="We intercepted a secret message, but it seems to be encoded using a cipher. See if you can decode it and get the flag!">
 			
 			<meta name="author" content="CTF Academy">			
 			<link href="../../src/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
@@ -50,7 +50,7 @@
 						</span>						
 						<span class = "mainorange"> 
 						<a href="index.htm">
-						Web App Exploitation
+						Cryptography
 						</a>
 						</span>						
 						</h2>
@@ -104,22 +104,19 @@
 
 <div class="list-group-flush myLightBox mb-4">
   <div class="list-group-item contents" >Table of Contents</div>
-    <a href="../index.htm#WebAppExploitation" class="list-group-item list-group-item-action">1. Web App Exploitation</a>
+    <a href="../index.htm#Cryptography" class="list-group-item list-group-item-action">1. Cryptography</a>
 
-  <a href="../index.htm#html" class="list-group-item list-group-item-action lvl2">1.1 HTML</a>
-  <a href="../index.htm#css" class="list-group-item list-group-item-action lvl2">1.2 CSS</a>
+  <a href="../index.htm#Ciphers" class="list-group-item list-group-item-action lvl2">1.1 Ciphers</a>
 
-    <a href="../index.htm#javascript" class="list-group-item list-group-item-action lvl2">1.3 JavaScript</a>
-	
-  <a href="../index.htm#database" class="list-group-item list-group-item-action lvl2">1.4 Databases</a>
   
-  <a href="../index.htm#SecurityVulnerabilities" class="list-group-item list-group-item-action">2. Security Vulnerabilities</a>
+  <a href="../index.htm#DigitalForensics" class="list-group-item list-group-item-action">2. Digital Forensics</a>
+
+  <a href="../index.htm#Steganography" class="list-group-item list-group-item-action">3. Steganography</a>
   
-    <a href="../index.htm#HTMLVulnerabilities" class="list-group-item list-group-item-action lvl2">2.1 HTML Vulnerabilities</a>
-  <a href="../index.htm#CSSVulnerabilities" class="list-group-item list-group-item-action lvl2">2.2 CSS Vulnerabilities</a>
-  <a href="../index.htm#JavaScriptVulnerabilities" class="list-group-item list-group-item-action lvl2">2.3 JavaScript Vulnerabilities</a>
-    <a href="../index.htm#DatabaseVulnerabilities" class="list-group-item list-group-item-action lvl2">2.4 Database Vulnerabilities</a>
-  <a href="../index.htm#Summary" class="list-group-item list-group-item-action">3. Summary</a>
+   <a href="../index.htm#FileSteganography" class="list-group-item list-group-item-action lvl2">3.1 File Steganography</a>
+   
+   
+   <a href="../cyberchef.htm" class="list-group-item list-group-item-action">CyberChef</a>
   
 
 </div>
@@ -147,7 +144,7 @@
 				
 				<ol class="breadcrumb">
 				  <li class="breadcrumb-item"><a href="../../index.htm">Home</a></li>
-				  <li class="breadcrumb-item"><a href="../index.htm">Web App Exploitation</a></li>
+				  <li class="breadcrumb-item"><a href="../index.htm">Cryptography</a></li>
 				  <li class="breadcrumb-item active">Challenge 1</li>
 				</ol>				
 
@@ -156,21 +153,26 @@
 				Please enable JavaScript on your web browser. For a tutorial, <a href="../../other/enable_javascript.htm">click here</a>.				
 				</noscript>
 
-<!-- Challenge Content Starts here -->
-<h3>Challenge 1: Commit to Comments</h3>
-<!-- Page developed by “Sir Code-a-lot” in April 2019 -->
-<p>
-It looks like this page may have some useful information hiding in its source code. See if you can answer these questions and find the flag.
-</p>
-<!-- To-Do: Make the “Admin.html” page and uncomment this link
-<a href="Admin.html"> Click here for the Admin page!</a> -->
+<h3>Challenge 1: Cryptography</h3>
 
 <p>
-<b>Hint:</b> Right click the page and select “View Page Source” or input “Ctrl+U” to view the HTML code and find the comments!
+We intercepted a secret message, but it seems to be encoded using a cipher. See if you can decode it and get the flag!
 </p>
-<!-- Great Job! Here’s your flag: ctfa{Quest_for_Comments} -->
+
+
 <p>
-<b>Question 1:</b> What is the developer’s nickname?
+<b>Hint:</b> Don't forget to use <a href="../cyberchef.htm" target="_blank">CyberChef</a>.
+</p>
+
+
+
+
+<p>
+<b>Secret message:</b> Gur frperg cnffjbeq vf uvqqra haqre gur oevqtr. Gur synt vf pgsn{pvcure_qrpvcure}
+</p>
+
+<p>
+<b>Question 1:</b> How many letters is the encoded message shifted?
 </p>
 
 <!-- Q1 input form -->
@@ -193,57 +195,6 @@ It looks like this page may have some useful information hiding in its source co
 </div>
 <!-- Flag form End -->
 
-
-
-<p>
-<b>Question 2:</b> What month of the year was this webpage written in?
-</p>
-
-<!-- Q2 input form -->
-<div class = "mySignInBox myLightBox my-4">
-<form class="text-center" novalidate>
-<div class = "mySignIn p-2">
-    <p class="h4">Question 2</p>	
-</div>	
-<div class = "mySignInFields p-4">	
-	<div class="mb-3">    
-    <input type="text" id="flag2" class="form-control">	
-	<span id="flagFeedback2"></span>
-	</div>
-	
-    <!-- Submit button -->
-    <button onclick="q2()" class="btn btn-mybutton btn-block mb-2" id = "submit2" type="button">Submit</button>
-
-    </div>
-</form>
-</div>
-<!-- Flag form End -->
-
-<p>
-<b>Question 3:</b> What is the name of the webpage that the developer has not finished making (and therefore not linked to)?
-</p>
-
-<!-- Q3 input form -->
-<div class = "mySignInBox myLightBox my-4">
-<form class="text-center" novalidate>
-<div class = "mySignIn p-2">
-    <p class="h4">Question 3</p>	
-</div>	
-<div class = "mySignInFields p-4">	
-	<div class="mb-3">    
-    <input type="text" id="flag3" class="form-control">	
-	<span id="flagFeedback3"></span>
-	</div>
-	
-    <!-- Submit button -->
-    <button onclick="q3()" class="btn btn-mybutton btn-block mb-2" id = "submit3" type="button">Submit</button>
-
-    </div>
-</form>
-</div>
-<!-- Flag form End -->
-
-<!-- Challenge Content Ends here -->
 
 <p>
 <b>Challenge 1:</b> Find the flag and input the answer.
@@ -316,29 +267,29 @@ It looks like this page may have some useful information hiding in its source co
 	  <!-- Footer Column 1 -->
 	<div class="col-md-4 order-2 order-md-1 leftInfo">	
 	<div class="infoLinks">
-		<a href="../../other/contact_us.htm" class="">Contact Us</a>
-		<a href="../../other/glossary.htm" class="">Glossary</a>
-		<a href="../../other/site_index.htm" class="">Site Index</a>	
-		<a href="../../other/legal_disclaimer.htm" class="">Legal Disclaimer</a>
+		<a href="../../other/contact_us.htm" >Contact Us</a>
+		<a href="../../other/glossary.htm" >Glossary</a>
+		<a href="../../other/quick_start.htm" >Quick Start Guide</a>	
+		<a href="../../other/legal_disclaimer.htm" >Legal Disclaimer</a>
 	</div>
 	</div>
   <!-- Footer Column 2 -->
       <div class="col-md-4 py-4 order-1 order-md-2">
         <div class="flex-center socialButtons">
           <!-- Email -->		  
-		  <a href="mailto:cybertrainingforceacademy@gmail.com">		  
+		  <a href="mailto:cybertrainingforceacademy@gmail.com" >		  
 		  <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
 		  </a>		  
 		<!-- Facebook -->
-			<a href="https://www.facebook.com/CTF-Academy-2271850929563454">
+			<a href="https://www.facebook.com/CTF-Academy-2271850929563454" target="_blank">
 		  <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
 		  </a>
           <!-- Twitter -->
-          <a href="https://twitter.com/CTFAcademy">
+          <a href="https://twitter.com/CTFAcademy" target="_blank">
             <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
           </a>
 		  <!-- YouTube-->
-          <a href="">
+          <a href="https://www.youtube.com/channel/UC2YnTDWba8lqC-x77h8id8w" target="_blank">
             <i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i>
           </a>         
         </div>
