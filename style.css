@@ -3,19 +3,7 @@
 
 	Designed by James Corley - james.corley@mga.edu
 	
-	Color Codes:	
-	Color Codes: 	
-	Light Purple	: #633393
-	Purple			: #42337E
-	Grey			: #B0B6BB
-	Light Grey		: #C9CED1
-	Black			: #000000
-	Bright Red:		: #f11e22
-	Light Silver	: #f2f2f2
-	Silver			: #e7e7e7
-	Darker Silver	: #733caa
-	
-	
+	Color Codes:		
 	Black			: #000000
 	White			: #FFFFFF
 	Orange			: #ff6600
@@ -502,6 +490,23 @@ text-align: center;
 
 
 .myVideo {width: 85%; margin: 0 auto;}
+
+.Email {
+	background-color: #FFFFFF;
+}
+
+.emailInfo {
+	background-color: #F5F5F5;
+}
+
+.emailInfo p {
+	border-bottom: 1px solid #000000;
+	margin: 0;
+	padding: 0;
+	padding-left: 20px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
 
 
 /* HTML Example Colors */
