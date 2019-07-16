@@ -15,7 +15,10 @@
 				<script src="src/jquery-3.4.1.min.js"></script>
 				<script src="src/popper.min.js"></script>				
 				<script src="src/bootstrap/js/bootstrap.min.js"></script>		
-				<link href="style.css" rel="stylesheet" />				
+				<link href="style.css" rel="stylesheet" />
+				<script src="src/jquery.md5.min.js"></script>
+				<script src="src/hashCheck.js"></script>
+				<script src="src/flagValidate.js"></script>
 				
 
 				<link rel="icon" href="src/Logo.ico" />
@@ -168,6 +171,26 @@ CTFA draws inspiration for its challenge-based learning exercises from cyber cap
 <p>
 To demonstrate how answers and flags are submitted, below is an example flag input bow. Try it out by entering the following flag: ctfa{example_flag}
 </p>
+
+<!-- Flag input form -->
+<div class = "mySignInBox myLightBox my-4">
+<form class="text-center" novalidate>
+<div class = "mySignIn p-2">
+    <p class="h4">Input Flag</p>	
+</div>	
+<div class = "mySignInFields p-4">	
+	<div class="mb-3">    
+    <input type="text" id="flag" class="form-control">	
+	<span id="flagFeedback"></span>
+	</div>
+	
+    <!-- Submit button -->
+    <button onclick="myFlag()" class="btn btn-mybutton btn-block mb-2" id = "submit" type="button">Submit</button>
+
+    </div>
+</form>
+</div>
+<!-- Flag form End -->
 
 <p>
 If you enter the flag correctly, you should see a completion message, like in the picture below. This is how you will know if you submitted the correct answer as you complete the challenges. 
