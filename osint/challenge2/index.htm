@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>CTF Academy : Challenge 2</title>
-			<meta name="description" content="We intercepted a file containing a secret flag, but we can’t seem to open the file. See if you can identify the proper file-type and open the file.">
+			<meta name="description" content="Below is a list of know malicious IP addresses gather through OSINT. Can you use this list to identify the malicious IPs in the web server log?">
 			
 			<meta name="author" content="CTF Academy">			
 			<link href="../../src/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
@@ -104,32 +104,22 @@
 
 <div class="list-group-flush myLightBox mb-4">
   <div class="list-group-item contents" >Table of Contents</div>
-    <a href="../index.htm#Open Source Intelligence" class="list-group-item list-group-item-action">1. Open Source Intelligence</a>
+    <a href="../index.htm#OpenSourceIntelligence" class="list-group-item list-group-item-action">1. Open Source Intelligence</a>
 
-  <a href="../index.htm#Ciphers" class="list-group-item list-group-item-action lvl2">1.1 Ciphers</a>
+  <a href="../index.htm#OSINTTechniques" class="list-group-item list-group-item-action lvl2">1.1 OSINT Techniques</a>
 
   
-  <a href="../index.htm#DigitalForensics" class="list-group-item list-group-item-action">2. Digital Forensics</a>
+  <a href="../index.htm#OSINTAttackExample" class="list-group-item list-group-item-action lvl2">1.2 OSINT Attack Example</a>
 
-  <a href="../index.htm#Steganography" class="list-group-item list-group-item-action">3. Steganography</a>
+  <a href="../index.htm#OSINTDefensiveTechniques" class="list-group-item list-group-item-action">2. OSINT Defensive Techniques</a>
   
-   <a href="../index.htm#FileSteganography" class="list-group-item list-group-item-action lvl2">3.1 File Steganography</a>
-   
-   
-   <a href="../cyberchef.htm" class="list-group-item list-group-item-action">CyberChef</a>
-  
-
 </div>
-
-
-
 
 <div class="list-group-flush myLightBox mb-3">
 
   <div class="list-group-item contents" >Challenges</div>
   <a href="../challenge1/index.htm" class="list-group-item list-group-item-action">Challenge 1</a>
-  <a href="index.htm" class="list-group-item list-group-item-action">Challenge 2</a>
-  <a href="../challenge3/index.htm" class="list-group-item list-group-item-action">Challenge 3</a>
+  <a href="../challenge2/index.htm" class="list-group-item list-group-item-action">Challenge 2</a>
 
 </div>
 
@@ -154,24 +144,219 @@
 				</noscript>
 
 <!-- Challenge Content Starts here -->
-<h3>Challenge 2: Forensics</h3>
+<h3>Challenge 2: Cross Reference</h3>
 
 <p>
-We intercepted a file containing a secret flag, but we can’t seem to open the file. See if you can identify the proper file-type and open the file.
-</p>
-
-<p>
-<a href="forensics_challenge.pdf"  target="_blank">
-Click here to access the file: forensics_challenge.pdf
-</a>
+Below is a list of know malicious IP addresses gather through OSINT. Can you use this list to identify the malicious IPs in the web server log?
 </p>
 
 
+<div class="table-responsive ">
+ 
+ <table class="table table-striped">
+  <thead >
+    <tr>
+      <th scope="col">Malicious  IP Addresses</th>
+
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>36.37.36.114</td>
+    </tr>
+   
+       <tr>
+      <td>36.37.39.204</td>
+    </tr>
+	
+	    <tr>
+      <td>42.1.128.64</td>
+    </tr>
+	
+	
+	<tr>
+      <td>51.254.200.34</td>
+    </tr>
+	
+	<tr>
+      <td>178.34.15.6</td>
+    </tr>
+	
+	<tr>
+      <td>36.241.115.49</td>
+    </tr>
+	
+	
+  </tbody>
+</table>
+</div>
+
+
+
+<div class="table-responsive py-2">
+ 
+ <table class="table table-striped">
+  <thead >
+    <tr>
+      <th scope="col">IP Address</th>
+	  <th>Date and Page</th>
+
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>10.0.0.49 
+	  </td>
+	  
+	  
+	  <td>[12/Jul/2019 19:01:31] "GET / HTTP/1.1" 200 
+	  </td>
+    </tr>
+   
+       <tr>
+      <td>36.37.39.204 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:01:32] code 404, message File not found
+	  </td>
+    </tr>
+	
+	    <tr>
+      <td>10.0.0.49 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:01:32] "GET /favicon.ico HTTP/1.1" 404 
+	  </td>
+    </tr>
+	
+	
+	<tr>
+      <td>178.34.15.6 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:01:32] code 404, message File not found
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>10.0.0.125 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:01:32] "GET /favicon.ico HTTP/1.1" 404 
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>10.0.0.125 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:01:46] code 404, message File not found
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>42.1.128.64 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:01:46] "GET /page1.html HTTP/1.1" 404 
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>10.0.0.49 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:02:25] "GET /page2.html HTTP/1.1" 200 
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>36.37.39.204 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:02:33] "GET /page3.html HTTP/1.1" 200 
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>36.37.39.204 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:02:45] "GET /page4.html HTTP/1.1" 200 
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>10.0.0.100 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:02:59] "GET / HTTP/1.1" 200 
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>36.37.39.204 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:03:03] "GET / HTTP/1.1" 200 
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>10.0.0.125 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:03:13] "GET /page4.html HTTP/1.1" 200 
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>10.0.0.49 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:03:17] "GET /page2.html HTTP/1.1" 200 
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>36.37.39.204 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:03:20] "GET /page3.html HTTP/1.1" 200 
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>10.0.0.100 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:03:23] "GET /page2.html HTTP/1.1" 200 
+	  </td>
+    </tr>
+	
+	<tr>
+      <td>10.0.0.100 
+	  </td>
+	  
+	  <td>[12/Jul/2019 19:03:30] "GET / HTTP/1.1" 200 
+	  </td>
+    </tr>
+	
+	
+  </tbody>
+</table>
+</div>
+
+
+
+
+
 
 <p>
-<b>Question 1:</b> What is the file signature for this file?
+<b>Question 1:</b> What is the first malicious IP address in this log?
 </p>
-
 <!-- Q1 input form -->
 <div class = "mySignInBox myLightBox my-4">
 <form class="text-center" novalidate>
@@ -193,15 +378,65 @@ Click here to access the file: forensics_challenge.pdf
 <!-- Flag form End -->
 
 
+
 <p>
-<b>Challenge 2:</b> Find the flag and input the answer.
+<b>Question 2:</b> What is the second malicious IP in this log?
+</p>
+
+<!-- Q2 input form -->
+<div class = "mySignInBox myLightBox my-4">
+<form class="text-center" novalidate>
+<div class = "mySignIn p-2">
+    <p class="h4">Question 2</p>	
+</div>	
+<div class = "mySignInFields p-4">	
+	<div class="mb-3">    
+    <input type="text" id="flag2" class="form-control">	
+	<span id="flagFeedback2"></span>
+	</div>
+	
+    <!-- Submit button -->
+    <button onclick="q2()" class="btn btn-mybutton btn-block mb-2" id = "submit2" type="button">Submit</button>
+
+    </div>
+</form>
+</div>
+<!-- Flag form End -->
+
+<p>
+<b>Question 3:</b> What malicious IP appeared the most in this log?
+</p>
+
+<!-- Q3 input form -->
+<div class = "mySignInBox myLightBox my-4">
+<form class="text-center" novalidate>
+<div class = "mySignIn p-2">
+    <p class="h4">Question 3</p>	
+</div>	
+<div class = "mySignInFields p-4">	
+	<div class="mb-3">    
+    <input type="text" id="flag3" class="form-control">	
+	<span id="flagFeedback3"></span>
+	</div>
+	
+    <!-- Submit button -->
+    <button onclick="q3()" class="btn btn-mybutton btn-block mb-2" id = "submit3" type="button">Submit</button>
+
+    </div>
+</form>
+</div>
+<!-- Flag form End -->
+
+
+<p>
+<b>Question 4:</b> How many times did the answer to Question 3 appear in the log?
 </p>
 
 <!-- Flag input form -->
 <div class = "mySignInBox myLightBox my-4">
 <form class="text-center" novalidate>
 <div class = "mySignIn p-2">
-    <p class="h4">Input Flag</p>	
+    <p class="h4">Question 4</p>	
 </div>	
 <div class = "mySignInFields p-4">	
 	<div class="mb-3">    
@@ -237,8 +472,6 @@ Click here to access the file: forensics_challenge.pdf
   <li class="page-item"><a class="page-link" href="../challenge1/answer.htm">3</a></li>
   <li class="page-item active"><a class="page-link" href="index.htm">4</a></li>
   <li class="page-item"><a class="page-link" href="answer.htm">5</a></li>
-  <li class="page-item"><a class="page-link" href="../challenge3/index.htm">6</a></li>
-  <li class="page-item"><a class="page-link" href="../challenge3/answer.htm">7</a></li>
     
    <li class="page-item">
       <a class="page-link" href="answer.htm" aria-label="Next">

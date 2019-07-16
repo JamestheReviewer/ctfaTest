@@ -2,7 +2,7 @@ function q1 (){
 	
 	var flag = $('#flag1').val();
 	
-	var flagHash = "bff139fa05ac583f685a523ab3d110a0";
+	var flagHash = "912865b91810712f61d7e7b993ee263e";
 		
 	var flagCheck = hashCheck(flag, flagHash);
 	
@@ -42,12 +42,99 @@ function q1 (){
 }
 
 
+function q2 (){
+	
+	var flag = $('#flag2').val();
+	
+	var flagHash = "f2aa0e12c7f0b8f176913837e36d62ce";
+		
+	var flagCheck = hashCheck(flag, flagHash);
+	
+	
+	if (flagCheck == true) {
+		
+		
+		$("#flagFeedback2").html("Good job! Try the next question.");
+		
+		$("#flagFeedback2").css("color", "#28a745");
+		
+		$("#submit2").css("transition-duration", "1.0s");
+		
+		$("#submit2").css("background-color", "#28a745");
+		
+		$("#flag2").css("transition-duration", "1.0s");
+		
+		$("#flag2").css("border-color", "#28a745");
+		
+	}
+	else {
+		
+		$("#flagFeedback2").html("Sorry, try again.");
+		
+		$("#flagFeedback2").css("color", "#dc3545");
+		
+		$("#submit2").css("transition-duration", "1.0s");
+		
+		$("#submit2").css("background-color", "#dc3545");
+		
+		$("#flag2").css("transition-duration", "1.0s");
+		
+		$("#flag2").css("border-color", "#dc3545");
+		
+	}
+
+}
+
+function q3 (){
+	
+	var flag = $('#flag3').val();
+	
+	var flagHash = "912865b91810712f61d7e7b993ee263e";
+		
+	var flagCheck = hashCheck(flag, flagHash);
+	
+	
+	if (flagCheck == true) {
+		
+		
+		$("#flagFeedback3").html("Good job! Try the next question.");
+		
+		$("#flagFeedback3").css("color", "#28a745");
+		
+		$("#submit3").css("transition-duration", "1.0s");
+		
+		$("#submit3").css("background-color", "#28a745");
+		
+		$("#flag3").css("transition-duration", "1.0s");
+		
+		$("#flag3").css("border-color", "#28a745");
+		
+	}
+	else {
+		
+		$("#flagFeedback3").html("Sorry, try again.");
+		
+		$("#flagFeedback3").css("color", "#dc3545");
+		
+		$("#submit3").css("transition-duration", "1.0s");
+		
+		$("#submit3").css("background-color", "#dc3545");
+		
+		$("#flag3").css("transition-duration", "1.0s");
+		
+		$("#flag3").css("border-color", "#dc3545");
+		
+	}
+
+}
+
+
 
 function myFlag (){
 	
 	var flag = $('#flag').val();
 	
-	var flagHash = "8405cdb083d7ca0b329bec5a96cafeb4";
+	var flagHash = "e4da3b7fbbce2345d7772b0674a318d5";
 		
 	var flagCheck = hashCheck(flag, flagHash);
 	

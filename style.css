@@ -493,6 +493,10 @@ text-align: center;
 
 .Email {
 	background-color: #FFFFFF;
+	
+	max-width: 566px;
+	
+	margin: 0 auto;
 }
 
 .emailInfo {
@@ -507,6 +511,8 @@ text-align: center;
 	padding-top: 2px;
 	padding-bottom: 2px;
 }
+
+thead {background-color: #ff6600; color: #FFFFFF;}
 
 
 /* HTML Example Colors */
