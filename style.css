@@ -417,8 +417,19 @@ color: #F5F5F5;
 	
 }
 
+.exampleForm span {
+	color: #28a745;
+	
+}
 
+.exampleForm .form-control {
+border-color: #28a745;
+}
 
+.exampleForm .btn {
+	
+	background-color: #28a745;
+}
 
 /* Classes and Ids */
 
